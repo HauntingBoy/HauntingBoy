@@ -1,0 +1,27 @@
+coroutine.wrap(UBNCGG_fake_script)()
+local function XKZGCW_fake_script() -- Auto_Stomp.Auto_Stomp 
+	local script = Instance.new('LocalScript', Auto_Stomp)
+
+	plr = game:GetService('Players').LocalPlayer
+	
+	script.Parent.CheckBox1.MouseButton1Click:Connect(function(Speed2)
+	repeat wait() until plr.Character:FindFirstChild('Humanoid') or plr.Character:FindFirstChild('xxx')
+		hum = plr.Character:FindFirstChild('Humanoid')
+			script.Parent.CheckBox2.Visible = true
+			script.Parent.CheckBox1.Visible = false
+			while wait() do
+				if plr.Character:FindFirstChild('Humanoid') or plr.Character:FindFirstChild('xxx') then
+					wait(.1)
+							print('Stomped')
+							game.ReplicatedStorage.MainEvent:FireServer("Stomp")
+						end
+				if script.Parent.CheckBox1.Visible == true and hum.Health > 0 then
+				break
+			end
+		end
+	end)
+	script.Parent.CheckBox2.MouseButton1Click:Connect(function(Speed2)
+			script.Parent.CheckBox1.Visible = true
+			script.Parent.CheckBox2.Visible = false
+	end)
+end
